@@ -13,7 +13,10 @@ let webPackConfig = require('./webpack.config');
 
 let sourceFolder = 'client';
 
-let source = ['client/**/*.{html,css}', '!**/app/**'];
+let source = [
+  'client/**/*.{html,css}', '!**/app/**',
+  'node_modules/todomvc-common/base.css'
+];
 let destinationFolder = 'build';
 let liveReload = miniLr();
 
@@ -42,12 +45,12 @@ gulp.task('livereload', function() {
 });
 
 gulp.task('client-copy', function() {
-  let clientWatch = watch(source, {base: sourceFolder, verbose: true});
+  let clientWatch = watch(source, {verbose: true});
   clientWatch.on('change', function(fileName) {
     notifyChanged([fileName]);
   });
 
-  gulp.src(source, {base: sourceFolder})
+  gulp.src(source, {})
     .pipe(clientWatch)
     .pipe(gulp.dest(destinationFolder));
 });
