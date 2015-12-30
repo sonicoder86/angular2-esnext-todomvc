@@ -3,20 +3,22 @@
 import {Component, Inject} from 'angular2/core';
 import {TodoLocalStore} from '../services/store';
 import todoTemplate from './todo.html';
+import {TodoHeader} from './todo_header';
+import {TodoFooter} from './todo_footer';
 
 @Component({
   selector: 'todo-app',
-  template: todoTemplate
+  template: todoTemplate,
+  directives: [TodoHeader, TodoFooter]
 })
 export class TodoApp {
   todoStore;
-  newTodo = '';
 
   static get parameters() {
     return [[TodoLocalStore]];
   }
 
-  constructor(@Inject(TodoLocalStore) todoStore) {
+  constructor(todoStore) {
     this.todoStore = todoStore;
   }
 
@@ -56,10 +58,7 @@ export class TodoApp {
     this.todoStore.remove(uid);
   }
 
-  addTodo() {
-    if (this.newTodo.trim().length) {
-      this.todoStore.add(this.newTodo);
-      this.newTodo = '';
-    }
+  addTodo(newItem) {
+    this.todoStore.add(newItem);
   }
 }
