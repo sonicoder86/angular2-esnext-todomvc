@@ -14,6 +14,10 @@ import {TodoItem} from './todoitem';
 export class ToDoList {
   newItem = '';
 
+  static get parameters() {
+    return [[TodoStore]];
+  }
+
   constructor(@Inject(TodoStore) store) {
     this.store = store;
   }
