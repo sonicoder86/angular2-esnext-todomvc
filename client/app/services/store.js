@@ -1,5 +1,4 @@
 'use strict';
-
 import * as uuid from 'node-uuid';
 import localStorage from 'localStorage';
 
@@ -41,7 +40,7 @@ export class TodoLocalStore {
   }
 
   get(state) {
-    return this.todos.filter((todo: Todo) => todo.completed === state.completed);
+    return this.todos.filter((todo) => todo.completed === state.completed);
   }
 
   allCompleted() {
@@ -49,12 +48,13 @@ export class TodoLocalStore {
   }
 
   setAllTo(toggler) {
-    this.todos.forEach((t) => t.completed = toggler.checked);
+    this.todos.forEach((todo) => todo.completed = toggler.checked);
     this._updateStore();
   }
 
   removeCompleted() {
     this.todos = this.get({completed: false});
+    this._updateStore();
   }
 
   getRemaining() {
@@ -66,27 +66,29 @@ export class TodoLocalStore {
   }
 
   toggleCompletion(uid) {
-    for (let todo of this.todos) {
-      if (todo.uid === uid) {
-        todo.completed = !todo.completed;
-        break;
-      }
+    let todo = this._findByUid(uid);
+
+    if (todo) {
+      todo.completed = !todo.completed;
+      this._updateStore();
     }
-    this._updateStore();
   }
 
   remove(uid) {
-    for (let todo of this.todos) {
-      if (todo.uid === uid) {
-        this.todos.splice(this.todos.indexOf(todo), 1);
-        break;
-      }
+    let todo = this._findByUid(uid);
+
+    if (todo) {
+      this.todos.splice(this.todos.indexOf(todo), 1);
+      this._updateStore();
     }
-    this._updateStore();
   }
 
   add(title) {
     this.todos.push(new Todo(title));
     this._updateStore();
+  }
+
+  _findByUid(uid) {
+    return this.todos.find((todo) => todo.uid == uid);
   }
 }

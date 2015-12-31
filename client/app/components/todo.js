@@ -1,5 +1,4 @@
 'use strict';
-
 import {Component, Inject} from 'angular2/core';
 import {TodoLocalStore} from '../services/store';
 import todoTemplate from './todo.html';
