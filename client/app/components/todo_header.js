@@ -1,5 +1,6 @@
 'use strict';
 import {Component, EventEmitter, Output} from 'angular2/core';
+import {TodoLocalStore} from '../services/store';
 import todoHeaderTemplate from './todo_header.html';
 
 @Component({
@@ -8,13 +9,15 @@ import todoHeaderTemplate from './todo_header.html';
 })
 export class TodoHeader {
   newTodo = '';
+  todoStore;
 
-  @Output()
-  newAdded = new EventEmitter();
+  constructor(todoStore: TodoLocalStore) {
+    this.todoStore = todoStore;
+  }
 
   addTodo() {
     if (this.newTodo.trim().length) {
-      this.newAdded.next(this.newTodo);
+      this.todoStore.add(this.newTodo);
       this.newTodo = '';
     }
   }

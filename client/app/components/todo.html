@@ -1,16 +1,9 @@
 <section class="todoapp">
-    <todo-header (newAdded)="addTodo($event)"></todo-header>
-    <section class="main" *ngIf="todoStore.todos.length > 0">
-        <input class="toggle-all" type="checkbox" *ngIf="todoStore.todos.length" #toggleall [checked]="todoStore.allCompleted()" (click)="todoStore.setAllTo(toggleall)">
+    <todo-header></todo-header>
+    <section class="main" *ngIf="getCount()">
+        <input class="toggle-all" type="checkbox" #toggleall [checked]="allCompleted()" (click)="setAllTo(toggleall)">
         <ul class="todo-list">
-            <li *ngFor="#todo of todoStore.todos" [class.completed]="todo.completed" [class.editing]="todo.editing">
-                <div class="view">
-                    <input class="toggle" type="checkbox" (click)="toggleCompletion(todo.uid)" [checked]="todo.completed">
-                    <label (dblclick)="editTodo(todo)">{{todo.title}}</label>
-                    <button class="destroy" (click)="remove(todo.uid)"></button>
-                </div>
-                <input class="edit" *ngIf="todo.editing" [value]="todo.title" #editedtodo (blur)="stopEditing(todo, editedtodo)" (keyup.enter)="updateEditingTodo(editedtodo, todo)" (keyup.escape)="cancelEditingTodo(todo)">
-            </li>
+            <todo-item *ngFor="#todo of todoStore.todos" [todo]="todo" (itemRemoved)="remove($event)" (itemModified)="update($event)"></todo-item>
         </ul>
     </section>
     <todo-footer></todo-footer>

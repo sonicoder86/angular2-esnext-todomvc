@@ -35,10 +35,6 @@ export class TodoLocalStore {
     });
   }
 
-  _updateStore() {
-    localStorage.setItem('angular2-todos', JSON.stringify(this.todos));
-  }
-
   get(state) {
     return this.todos.filter((todo) => todo.completed === state.completed);
   }
@@ -74,6 +70,10 @@ export class TodoLocalStore {
     }
   }
 
+  update() {
+    this._updateStore();
+  }
+
   remove(uid) {
     let todo = this._findByUid(uid);
 
@@ -86,6 +86,10 @@ export class TodoLocalStore {
   add(title) {
     this.todos.push(new Todo(title));
     this._updateStore();
+  }
+
+  _updateStore() {
+    localStorage.setItem('angular2-todos', JSON.stringify(this.todos));
   }
 
   _findByUid(uid) {

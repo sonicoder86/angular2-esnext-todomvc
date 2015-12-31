@@ -8,13 +8,7 @@ import todoFooterTemplate from './todo_footer.html';
   template: todoFooterTemplate
 })
 export class TodoFooter {
-  todoStore;
-
-  static get parameters() {
-    return [[TodoLocalStore]];
-  }
-
-  constructor(todoStore) {
+  constructor(todoStore: TodoLocalStore) {
     this.todoStore = todoStore;
   }
 
