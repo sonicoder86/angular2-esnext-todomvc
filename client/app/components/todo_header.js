@@ -9,7 +9,6 @@ import todoHeaderTemplate from './todo_header.html';
 })
 export class TodoHeader {
   newTodo = '';
-  todoStore;
 
   constructor(todoStore: TodoLocalStore) {
     this.todoStore = todoStore;
