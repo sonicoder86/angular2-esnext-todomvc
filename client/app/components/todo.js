@@ -28,10 +28,6 @@ export class TodoApp {
     return this._todoStore.todos;
   }
 
-  getCount() {
-    return this._todoStore.todos.length;
-  }
-
   allCompleted() {
     return this._todoStore.allCompleted();
   }
