@@ -16,13 +16,15 @@ export class TodoItem {
   @Output()
   itemRemoved = new EventEmitter();
 
+  editing = false;
+
   cancelEditing() {
-    this.todo.editing = false;
+    this.editing = false;
   }
 
   stopEditing(editedTitle) {
     this.todo.setTitle(editedTitle.value);
-    this.todo.editing = false;
+    this.editing = false;
 
     if (this.todo.title.length === 0) {
       this.remove();
@@ -33,7 +35,7 @@ export class TodoItem {
   }
 
   edit() {
-    this.todo.editing = true;
+    this.editing = true;
   }
 
   toggleCompletion() {

@@ -21,7 +21,7 @@ export class TodoApp {
   }
 
   update() {
-    this._todoStore.update();
+    this._todoStore.persist();
   }
 
   getTodos() {
