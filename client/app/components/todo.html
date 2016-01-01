@@ -3,7 +3,7 @@
     <section class="main" *ngIf="getCount()">
         <input class="toggle-all" type="checkbox" #toggleall [checked]="allCompleted()" (click)="setAllTo(toggleall)">
         <ul class="todo-list">
-            <todo-item *ngFor="#todo of todoStore.todos" [todo]="todo" (itemRemoved)="remove($event)" (itemModified)="update($event)"></todo-item>
+            <todo-item *ngFor="#todo of getTodos()" [todo]="todo" (itemRemoved)="remove($event)" (itemModified)="update($event)"></todo-item>
         </ul>
     </section>
     <todo-footer></todo-footer>

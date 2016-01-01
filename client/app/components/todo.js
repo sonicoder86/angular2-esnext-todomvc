@@ -13,26 +13,30 @@ import {TodoItem} from './todo_item';
 })
 export class TodoApp {
   constructor(todoStore: TodoLocalStore) {
-    this.todoStore = todoStore;
+    this._todoStore = todoStore;
   }
 
   remove(uid) {
-    this.todoStore.remove(uid);
+    this._todoStore.remove(uid);
   }
 
   update() {
-    this.todoStore.update();
+    this._todoStore.update();
+  }
+
+  getTodos() {
+    return this._todoStore.todos;
   }
 
   getCount() {
-    return this.todoStore.todos.length;
+    return this._todoStore.todos.length;
   }
 
   allCompleted() {
-    return this.todoStore.allCompleted();
+    return this._todoStore.allCompleted();
   }
 
   setAllTo(toggleAll) {
-    this.todoStore.setAllTo(toggleAll)
+    this._todoStore.setAllTo(toggleAll)
   }
 }

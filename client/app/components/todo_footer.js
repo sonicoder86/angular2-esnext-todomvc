@@ -9,22 +9,22 @@ import todoFooterTemplate from './todo_footer.html';
 })
 export class TodoFooter {
   constructor(todoStore: TodoLocalStore) {
-    this.todoStore = todoStore;
+    this._todoStore = todoStore;
   }
 
   removeCompleted() {
-    this.todoStore.removeCompleted();
+    this._todoStore.removeCompleted();
   }
 
   getCount() {
-    return this.todoStore.todos.length;
+    return this._todoStore.todos.length;
   }
 
   getRemainingCount() {
-    return this.todoStore.getRemaining().length;
+    return this._todoStore.getRemaining().length;
   }
 
   hasCompleted() {
-    return this.todoStore.getCompleted().length > 0;
+    return this._todoStore.getCompleted().length > 0;
   }
 }

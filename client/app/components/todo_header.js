@@ -11,12 +11,12 @@ export class TodoHeader {
   newTodo = '';
 
   constructor(todoStore: TodoLocalStore) {
-    this.todoStore = todoStore;
+    this._todoStore = todoStore;
   }
 
   addTodo() {
     if (this.newTodo.trim().length) {
-      this.todoStore.add(this.newTodo);
+      this._todoStore.add(this.newTodo);
       this.newTodo = '';
     }
   }
