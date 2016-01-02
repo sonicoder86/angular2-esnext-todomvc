@@ -18,10 +18,24 @@ git clone https://github.com/blacksonic/angular2-es6-todomvc.git
 cd angular2-es6-todomvc
 npm install
 
-npm start
-# or use it with Gulp
 gulp start
 
 ```
 
 Open it in your browser [http://localhost:9000](http://localhost:9000).
+
+### Deployment (to Heroku)
+
+```bash
+
+gulp dist
+
+cd dist
+git init
+git add -A .
+git commit -m "Deploy #1" && echo Committed
+git push -f git@heroku.com:angular2-es6-todomvc.git master
+
+```
+
+Check out the [deployed version](https://angular2-es6-todomvc.herokuapp.com/).

@@ -17,11 +17,10 @@
   "license": "ISC",
   "keywords": [
     "angular2",
-    "es6",
-    "webpack",
+    "todomvc",
     "gulp"
   ],
-  "description": "A skeleton Angular2 ES6 application built with Babel, Webpack, Gulp",
+  "description": "TodoMVC application built with Angular 2 ES6.",
   "engines": {
     "node": "4.2.4"
   },
@@ -43,6 +42,7 @@
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.13",
     "gulp": "^3.9.0",
+    "gulp-delete-lines": "0.0.7",
     "gulp-nodemon": "^2.0.4",
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.5",
