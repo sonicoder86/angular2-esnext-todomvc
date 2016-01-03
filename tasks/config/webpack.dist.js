@@ -6,6 +6,9 @@ config.plugins = [
   new webpack.optimize.UglifyJsPlugin({
     mangle: false,
     comments: false
+  }),
+  new webpack.DefinePlugin({
+    ENVIRONMENT: JSON.stringify('production')
   })
 ];
 
