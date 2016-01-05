@@ -1,4 +1,6 @@
-# Angular 2 ES6 TodoMVC [![Dependency Status](https://david-dm.org/blacksonic/angular2-es6-todomvc.svg)](https://david-dm.org/blacksonic/angular2-es6-todomvc)
+# Angular 2 ES6 TodoMVC 
+[![Dependency Status](https://david-dm.org/blacksonic/angular2-es6-todomvc.svg)](https://david-dm.org/blacksonic/angular2-es6-todomvc)
+[![devDependency Status](https://david-dm.org/blacksonic/angular2-es6-todomvc/dev-status.svg)](https://david-dm.org/blacksonic/angular2-es6-todomvc#info=devDependencies)
 
 TodoMVC application built with Angular 2 ES6.
 To get an insight how it works [Colin Eberhardt's tutorial](http://blog.scottlogic.com/2015/12/07/angular-2.html) gives a good starting point.
