@@ -33,6 +33,6 @@ export class TodoApp {
   }
 
   setAllTo(toggleAll) {
-    this._todoStore.setAllTo(toggleAll)
+    this._todoStore.setAllTo(toggleAll.checked);
   }
 }

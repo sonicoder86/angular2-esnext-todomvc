@@ -40,8 +40,8 @@ export class TodoLocalStore {
     return this.todos.length === this.getCompleted().length;
   }
 
-  setAllTo(toggler) {
-    this.todos.forEach((todo) => todo.completed = toggler.checked);
+  setAllTo(completed) {
+    this.todos.forEach((todo) => todo.completed = completed);
     this.persist();
   }
 
