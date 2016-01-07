@@ -1,5 +1,5 @@
 {
-  "name": "angular2-es6-starter",
+  "name": "angular2-es6-todomvc",
   "version": "1.0.0",
   "main": "server/index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/blacksonic/angular2-es6-starter.git"
+    "url": "git+https://github.com/blacksonic/angular2-es6-todomvc.git"
   },
   "author": {
     "name": "blacksonic",
@@ -20,9 +20,9 @@
   "keywords": [
     "angular2",
     "todomvc",
-    "gulp"
+    "es6"
   ],
-  "description": "TodoMVC application built with Angular 2 ES6.",
+  "description": "Angular 2 TodoMVC application in ES6.",
   "engines": {
     "node": "4.2.4"
   },

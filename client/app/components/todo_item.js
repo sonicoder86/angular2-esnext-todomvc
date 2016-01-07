@@ -1,10 +1,12 @@
 'use strict';
 import {Component, EventEmitter, Output, Input} from 'angular2/core';
+import {TrimPipe} from '../pipes/trim';
 import todoItemTemplate from './todo_item.html';
 
 @Component({
   selector: 'todo-item',
-  template: todoItemTemplate
+  template: todoItemTemplate,
+  pipes: [TrimPipe]
 })
 export class TodoItem {
   @Input()
