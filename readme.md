@@ -21,7 +21,7 @@ git clone https://github.com/blacksonic/angular2-es6-todomvc.git
 cd angular2-es6-todomvc
 npm install
 
-gulp start
+gulp serve
 
 ```
 
