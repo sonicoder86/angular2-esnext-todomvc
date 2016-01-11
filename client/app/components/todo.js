@@ -1,5 +1,6 @@
 'use strict';
 import {Component, Inject} from 'angular2/core';
+import {RouteParams} from 'angular2/router';
 import {TodoLocalStore} from '../services/store';
 import todoTemplate from './todo.html';
 import {TodoHeader} from './todo_header';
@@ -7,13 +8,14 @@ import {TodoFooter} from './todo_footer';
 import {TodoItem} from './todo_item';
 
 @Component({
-  selector: 'todo-app',
+  selector: 'todo',
   template: todoTemplate,
   directives: [TodoHeader, TodoFooter, TodoItem]
 })
-export class TodoApp {
-  constructor(todoStore: TodoLocalStore) {
+export class Todo {
+  constructor(todoStore: TodoLocalStore, params: RouteParams) {
     this._todoStore = todoStore;
+    this._params = params;
   }
 
   remove(uid) {

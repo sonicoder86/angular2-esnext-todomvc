@@ -12,6 +12,7 @@ The structure of the project comes from a [starter pack](https://github.com/blac
 - Creating child @Component and communicating with parent (@Input, @Output).
 - Using Dependency Injection for service.
 - Use @Pipe inside @Component.
+- Routing.
 
 ### Quick Start
 

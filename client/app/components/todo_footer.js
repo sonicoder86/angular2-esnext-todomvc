@@ -1,11 +1,13 @@
 'use strict';
 import {Component} from 'angular2/core';
+import {ROUTER_DIRECTIVES} from 'angular2/router';
 import {TodoLocalStore} from '../services/store';
 import todoFooterTemplate from './todo_footer.html';
 
 @Component({
   selector: 'todo-footer',
-  template: todoFooterTemplate
+  template: todoFooterTemplate,
+  directives: [ROUTER_DIRECTIVES]
 })
 export class TodoFooter {
   constructor(todoStore: TodoLocalStore) {
