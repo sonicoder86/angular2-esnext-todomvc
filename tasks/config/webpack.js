@@ -1,6 +1,7 @@
 'use strict';
 let path = require('path');
 let webpack = require('webpack');
+let ExtractTextPlugin = require("extract-text-webpack-plugin");
 let config = require('./index').client;
 
 module.exports = {
@@ -31,6 +32,10 @@ module.exports = {
       {
         test: /\.html$/,
         loader: "html?minimize=false"
+      },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style', 'css')
       }
     ]
   },
@@ -46,7 +51,8 @@ module.exports = {
     }),
     new webpack.optimize.CommonsChunkPlugin(
       'vendor', 'vendor.js'
-    )
+    ),
+    new ExtractTextPlugin("[name].css")
   ],
 
   devtool: 'source-map'

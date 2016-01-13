@@ -8,3 +8,6 @@ import 'localStorage';
 import 'angular2/core';
 import 'angular2/platform/browser';
 import 'angular2/router';
+
+import 'todomvc-app-css/index.css';
+import 'todomvc-common/base.css';

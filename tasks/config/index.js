@@ -2,7 +2,7 @@
 
 module.exports = {
   client: {
-    source: ['client/**/*.{html,css}', '!**/app/**', 'node_modules/todomvc-common/base.css'],
+    source: ['client/**/*.{html,css}', '!**/app/**'],
     destination: 'dist/client'
   },
   server: {
