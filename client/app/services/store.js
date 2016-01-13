@@ -51,11 +51,19 @@ export class TodoLocalStore {
   }
 
   getRemaining() {
-    return this.get({completed: false});
+    if (!this.remainingTodos) {
+      this.remainingTodos = this.get({completed: false});
+    }
+
+    return this.remainingTodos;
   }
 
   getCompleted() {
-    return this.get({completed: true});
+    if (!this.completedTodos) {
+      this.completedTodos = this.get({completed: true});
+    }
+
+    return this.completedTodos;
   }
 
   toggleCompletion(uid) {
@@ -82,10 +90,16 @@ export class TodoLocalStore {
   }
 
   persist() {
+    this._clearCache();
     localStorage.setItem('angular2-todos', JSON.stringify(this.todos));
   }
 
   _findByUid(uid) {
     return this.todos.find((todo) => todo.uid == uid);
+  }
+
+  _clearCache() {
+    this.completedTodos = null;
+    this.remainingTodos = null;
   }
 }

@@ -27,7 +27,16 @@ export class Todo {
   }
 
   getTodos() {
-    return this._todoStore.todos;
+    let currentStatus = this._params.get('status');
+    if (currentStatus == 'completed') {
+      return this._todoStore.getCompleted();
+    }
+    else if (currentStatus == 'active') {
+      return this._todoStore.getRemaining();
+    }
+    else {
+      return this._todoStore.todos;
+    }
   }
 
   allCompleted() {
