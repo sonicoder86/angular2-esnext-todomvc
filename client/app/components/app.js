@@ -9,7 +9,7 @@ import {Todo} from './todo';
   template: appTemplate
 })
 @RouteConfig([
-  { path: '/:status', component: Todo, as: 'Todo' }
+  { path: '/:status', component: Todo, name: 'Todo' }
 ])
 export class App {
 }

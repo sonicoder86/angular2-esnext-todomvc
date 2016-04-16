@@ -1,7 +1,11 @@
 'use strict';
 import 'es6-shim';
+import 'es6-promise';
 import 'reflect-metadata';
-import 'zone.js/lib/browser/zone-microtask';
+
+import 'zone.js/dist/zone';
+import 'zone.js/dist/long-stack-trace-zone';
+
 import {bootstrap} from 'angular2/platform/browser';
 import {enableProdMode, provide} from 'angular2/core';
 import {ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy} from 'angular2/router';
