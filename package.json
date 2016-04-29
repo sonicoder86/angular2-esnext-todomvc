@@ -30,8 +30,8 @@
     "koa-static": "2.0.0"
   },
   "devDependencies": {
-    "angular2": "2.0.0-beta.15",
-    "babel-core": "6.7.6",
+    "angular2": "2.0.0-beta.17",
+    "babel-core": "6.7.7",
     "babel-loader": "6.2.4",
     "babel-plugin-angular2-annotations": "5.0.0",
     "babel-plugin-transform-class-properties": "6.6.0",
@@ -54,11 +54,11 @@
     "node-uuid": "1.4.7",
     "reflect-metadata": "0.1.2",
     "run-sequence": "1.1.5",
-    "rxjs": "5.0.0-beta.2",
+    "rxjs": "5.0.0-beta.6",
     "style-loader": "0.13.1",
     "todomvc-app-css": "^2.0.0",
     "todomvc-common": "^1.0.1",
     "webpack": "1.13.0",
-    "zone.js": "0.6.11"
+    "zone.js": "0.6.12"
   }
 }

@@ -8,7 +8,8 @@ import 'zone.js/dist/long-stack-trace-zone';
 
 import {bootstrap} from 'angular2/platform/browser';
 import {enableProdMode, provide} from 'angular2/core';
-import {ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy} from 'angular2/router';
+import {ROUTER_PROVIDERS} from 'angular2/router';
+import { HashLocationStrategy, LocationStrategy } from 'angular2/platform/common';
 import {TodoLocalStore} from './app/services/store';
 import {App} from './app/components/app';
 
