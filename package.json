@@ -1,5 +1,5 @@
 {
-  "name": "angular2-es6-todomvc",
+  "name": "angular2-esnext-todomvc",
   "version": "1.0.0",
   "main": "server/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/blacksonic/angular2-es6-todomvc.git"
+    "url": "git+https://github.com/blacksonic/angular2-esnext-todomvc.git"
   },
   "author": {
     "name": "blacksonic",
@@ -21,7 +21,7 @@
     "todomvc",
     "es6"
   ],
-  "description": "Angular 2 TodoMVC application in ES6.",
+  "description": "Angular 2 TodoMVC application in Javascript (ES6/ES7).",
   "engines": {
     "node": "4.2.4"
   },
