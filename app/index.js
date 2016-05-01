@@ -10,12 +10,9 @@ import {bootstrap} from 'angular2/platform/browser';
 import {enableProdMode, provide} from 'angular2/core';
 import {ROUTER_PROVIDERS} from 'angular2/router';
 import { HashLocationStrategy, LocationStrategy } from 'angular2/platform/common';
-import {TodoLocalStore} from './app/services/store';
-import {App} from './app/components/app';
+import {TodoLocalStore} from './services/store';
+import {App} from './components/app';
 
-if (ENVIRONMENT == 'production') {
-  enableProdMode();
-}
 bootstrap(App, [
   TodoLocalStore,
   ROUTER_PROVIDERS,

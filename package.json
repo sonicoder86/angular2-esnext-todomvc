@@ -1,11 +1,11 @@
 {
   "name": "angular2-esnext-todomvc",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "server/index.js",
   "scripts": {
-    "start": "node server/index.js",
-    "test": "gulp test",
-    "webdriver-update": "webdriver-manager update"
+    "start": "http-server -a 0.0.0.0 -p 9000",
+    "bundle": "webpack app/index.js app/dist/index.bundle.js --config webpack.config.js --watch -d",
+    "dist": "webpack app/index.js app/dist/index.bundle.js --config webpack.config.js -p"
   },
   "repository": {
     "type": "git",
@@ -23,14 +23,22 @@
   ],
   "description": "Angular 2 TodoMVC application in Javascript (ES6/ES7).",
   "engines": {
-    "node": "4.2.4"
+    "node": "4.4.0"
   },
   "dependencies": {
-    "koa": "1.2.0",
-    "koa-static": "2.0.0"
+    "angular2": "2.0.0-beta.17",
+    "es6-promise": "3.1.2",
+    "es6-shim": "0.35.0",
+    "http-server": "0.9.0",
+    "localStorage": "1.0.3",
+    "node-uuid": "1.4.7",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "5.0.0-beta.6",
+    "todomvc-app-css": "^2.0.0",
+    "todomvc-common": "^1.0.1",
+    "zone.js": "0.6.12"
   },
   "devDependencies": {
-    "angular2": "2.0.0-beta.17",
     "babel-core": "6.7.7",
     "babel-loader": "6.2.4",
     "babel-plugin-angular2-annotations": "5.0.0",
@@ -38,27 +46,7 @@
     "babel-plugin-transform-decorators-legacy": "1.3.4",
     "babel-plugin-transform-flow-strip-types": "6.7.0",
     "babel-preset-es2015": "6.6.0",
-    "css-loader": "0.23.1",
-    "del": "2.2.0",
-    "es6-promise": "3.1.2",
-    "es6-shim": "0.35.0",
-    "extract-text-webpack-plugin": "1.0.1",
-    "gulp": "3.9.1",
-    "gulp-delete-lines": "0.0.7",
-    "gulp-nodemon": "2.0.6",
-    "gulp-util": "3.0.7",
-    "gulp-watch": "4.3.5",
-    "html-loader": "0.4.3",
-    "localStorage": "1.0.3",
-    "mini-lr": "0.1.9",
-    "node-uuid": "1.4.7",
-    "reflect-metadata": "0.1.2",
-    "run-sequence": "1.1.5",
-    "rxjs": "5.0.0-beta.6",
-    "style-loader": "0.13.1",
-    "todomvc-app-css": "^2.0.0",
-    "todomvc-common": "^1.0.1",
-    "webpack": "1.13.0",
-    "zone.js": "0.6.12"
+    "html-loader": "^0.4.3",
+    "webpack": "1.13.0"
   }
 }

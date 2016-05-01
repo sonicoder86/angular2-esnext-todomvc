@@ -21,10 +21,11 @@ The structure of the project comes from a [starter pack](https://github.com/blac
 
 git clone https://github.com/blacksonic/angular2-esnext-todomvc.git
 cd angular2-esnext-todomvc
-npm install
 
-gulp serve
+npm install
+npm run bundle
+npm start
 
 ```
 
-Open it in your browser [http://localhost:9000](http://localhost:9000).
+Open it in your browser [http://localhost:9000/app](http://localhost:9000/app).
