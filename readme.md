@@ -1,5 +1,4 @@
 # Angular 2 ESNext TodoMVC
-[![npm version](https://badge.fury.io/js/angular2.svg)](http://badge.fury.io/js/angular2)
 [![Dependency Status](https://david-dm.org/blacksonic/angular2-esnext-todomvc.svg)](https://david-dm.org/blacksonic/angular2-esnext-todomvc)
 [![devDependency Status](https://david-dm.org/blacksonic/angular2-esnext-todomvc/dev-status.svg)](https://david-dm.org/blacksonic/angular2-esnext-todomvc#info=devDependencies)
 
