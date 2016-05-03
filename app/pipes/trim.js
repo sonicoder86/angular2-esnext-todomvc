@@ -1,7 +1,7 @@
 'use strict';
-import {Pipe, PipeTransform} from 'angular2/core';
+import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({name: 'trim'})
+@Pipe({ name: 'trim' })
 export class TrimPipe implements PipeTransform {
   transform(value, args) {
     return value.trim();

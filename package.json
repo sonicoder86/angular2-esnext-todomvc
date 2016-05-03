@@ -1,6 +1,6 @@
 {
   "name": "angular2-esnext-todomvc",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "main": "server/index.js",
   "scripts": {
     "start": "http-server -a 0.0.0.0 -p 9000",
@@ -26,7 +26,13 @@
     "node": "4.4.0"
   },
   "dependencies": {
-    "angular2": "2.0.0-beta.17",
+    "@angular/common": "2.0.0-rc.0",
+    "@angular/compiler": "2.0.0-rc.0",
+    "@angular/core": "2.0.0-rc.0",
+    "@angular/platform-browser": "2.0.0-rc.0",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.0",
+    "@angular/router": "2.0.0-rc.0",
+    "@angular/router-deprecated": "2.0.0-rc.0",
     "es6-promise": "3.1.2",
     "es6-shim": "0.35.0",
     "http-server": "0.9.0",

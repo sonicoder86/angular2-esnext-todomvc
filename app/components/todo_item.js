@@ -1,6 +1,6 @@
 'use strict';
-import {Component, EventEmitter, Output, Input} from 'angular2/core';
-import {TrimPipe} from '../pipes/trim';
+import { Component, EventEmitter, Output, Input } from '@angular/core';
+import { TrimPipe } from '../pipes/trim';
 import todoItemTemplate from './todo_item.html';
 
 @Component({

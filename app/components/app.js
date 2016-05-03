@@ -1,7 +1,7 @@
-import {Component} from 'angular2/core';
-import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+import { Component } from '@angular/core';
+import { RouteConfig, ROUTER_DIRECTIVES } from '@angular/router-deprecated';
 import appTemplate from './app.html';
-import {Todo} from './todo';
+import { Todo } from './todo';
 
 @Component({
   selector: 'todo-app',

@@ -1,11 +1,11 @@
 'use strict';
-import {Component, Inject} from 'angular2/core';
-import {RouteParams} from 'angular2/router';
-import {TodoLocalStore} from '../services/store';
+import { Component, Inject } from '@angular/core';
+import { RouteParams } from '@angular/router-deprecated';
+import { TodoLocalStore } from '../services/store';
 import todoTemplate from './todo.html';
-import {TodoHeader} from './todo_header';
-import {TodoFooter} from './todo_footer';
-import {TodoItem} from './todo_item';
+import { TodoHeader } from './todo_header';
+import { TodoFooter } from './todo_footer';
+import { TodoItem } from './todo_item';
 
 @Component({
   selector: 'todo',

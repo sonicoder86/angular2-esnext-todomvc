@@ -1,6 +1,6 @@
 'use strict';
-import {Component, EventEmitter, Output} from 'angular2/core';
-import {TodoLocalStore} from '../services/store';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { TodoLocalStore } from '../services/store';
 import todoHeaderTemplate from './todo_header.html';
 
 @Component({

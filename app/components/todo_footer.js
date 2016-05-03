@@ -1,7 +1,7 @@
 'use strict';
-import {Component} from 'angular2/core';
-import {ROUTER_DIRECTIVES, RouteParams} from 'angular2/router';
-import {TodoLocalStore} from '../services/store';
+import { Component } from '@angular/core';
+import { ROUTER_DIRECTIVES, RouteParams } from '@angular/router-deprecated';
+import { TodoLocalStore } from '../services/store';
 import todoFooterTemplate from './todo_footer.html';
 
 @Component({
