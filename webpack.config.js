@@ -19,7 +19,7 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        loader: "html?minimize=false"
+        loader: 'raw'
       }
     ]
   },
