@@ -1,21 +1,6 @@
-import * as uuid from 'node-uuid';
 import localStorage from 'localStorage';
 
-export class TodoModel {
-  completed;
-  title;
-  uid;
-
-  setTitle(title) {
-    this.title = title.trim();
-  }
-
-  constructor(title) {
-    this.uid = uuid.v4();
-    this.completed = false;
-    this.title = title.trim();
-  }
-}
+import { TodoModel } from '../models/todo.model';
 
 export class TodoStoreService {
   todos = [];

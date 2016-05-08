@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ROUTER_DIRECTIVES, RouteParams } from '@angular/router-deprecated';
 
-import { TodoStoreService } from '../services/todo-store.service';
+import { TodoStoreService } from '../../services/todo-store.service';
 import template from './todo-footer.template.html';
 
 @Component({

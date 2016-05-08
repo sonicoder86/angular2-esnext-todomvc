@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RouteParams } from '@angular/router-deprecated';
 
-import { TodoStoreService } from '../services/todo-store.service';
+import { TodoStoreService } from '../../services/todo-store.service';
 import template from './todo-list.template.html';
-import { TodoHeaderComponent } from './todo-header.component';
-import { TodoFooterComponent } from './todo-footer.component';
-import { TodoItemComponent } from './todo-item.component';
+import { TodoHeaderComponent } from '../todo-header/todo-header.component';
+import { TodoFooterComponent } from '../todo-footer/todo-footer.component';
+import { TodoItemComponent } from '../todo-item/todo-item.component';
 
 @Component({
   selector: 'todo-list',

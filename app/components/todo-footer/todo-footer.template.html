@@ -1,5 +1,5 @@
 <footer class="footer" *ngIf="getCount()">
-    <span class="todo-count"><strong>{{getRemainingCount()}}</strong> {{getRemainingCount() == 1 ? 'item' : 'items'}} left</span>
+    <span class="todo-count"><strong>{{ getRemainingCount() }}</strong> {{ getRemainingCount() == 1 ? 'item' : 'items' }} left</span>
     <ul class="filters">
         <li>
             <a [routerLink]="['/Todo', { status: '' }]" [class.selected]="getStatus() == ''">All</a>

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouteConfig, ROUTER_DIRECTIVES } from '@angular/router-deprecated';
 
 import template from './app.template.html';
-import { TodoComponent } from './todo-list.component';
+import { TodoComponent } from '../todo-list/todo-list.component';
 
 @Component({
   selector: 'todo-app',

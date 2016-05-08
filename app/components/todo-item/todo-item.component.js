@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output, Input } from '@angular/core';
 
-import { TrimPipe } from '../pipes/trim.pipe';
+import { TrimPipe } from '../../pipes/trim.pipe';
 import template from './todo-item.template.html';
 
 @Component({
