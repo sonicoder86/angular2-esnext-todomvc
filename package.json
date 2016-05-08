@@ -1,11 +1,10 @@
 {
   "name": "angular2-esnext-todomvc",
   "version": "3.0.0",
-  "main": "server/index.js",
+  "main": "app/main.js",
   "scripts": {
     "start": "http-server -a 0.0.0.0 -p 9000",
-    "bundle": "webpack app/index.js app/dist/index.bundle.js --config webpack.config.js --watch -d",
-    "dist": "webpack app/index.js app/dist/index.bundle.js --config webpack.config.js -p"
+    "bundle": "webpack app/main.js app/dist/main.bundle.js --config webpack.config.js --watch -d"
   },
   "repository": {
     "type": "git",

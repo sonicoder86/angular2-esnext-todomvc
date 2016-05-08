@@ -1,8 +1,7 @@
-'use strict';
 import * as uuid from 'node-uuid';
 import localStorage from 'localStorage';
 
-export class Todo {
+export class TodoModel {
   completed;
   title;
   uid;
@@ -18,14 +17,14 @@ export class Todo {
   }
 }
 
-export class TodoStore {
+export class TodoStoreService {
   todos = [];
 
   constructor() {
     let persistedTodos = JSON.parse(localStorage.getItem('angular2-todos')) || [];
 
     this.todos = persistedTodos.map( (todo) => {
-      let ret = new Todo(todo.title);
+      let ret = new TodoModel(todo.title);
       ret.completed = todo.completed;
       ret.uid = todo.uid;
       return ret;
@@ -85,7 +84,7 @@ export class TodoStore {
   }
 
   add(title) {
-    this.todos.push(new Todo(title));
+    this.todos.push(new TodoModel(title));
     this.persist();
   }
 

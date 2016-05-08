@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { RouteConfig, ROUTER_DIRECTIVES } from '@angular/router-deprecated';
-import appTemplate from './app.html';
-import { Todo } from './todo';
+
+import template from './app.template.html';
+import { TodoComponent } from './todo-list.component';
 
 @Component({
   selector: 'todo-app',
   directives: [ROUTER_DIRECTIVES],
-  template: appTemplate
+  template: template
 })
 @RouteConfig([
-  { path: '/:status', component: Todo, name: 'Todo' }
+  { path: '/:status', component: TodoComponent, name: 'Todo' }
 ])
-export class App {
-}
+export class AppComponent {}

@@ -1,19 +1,19 @@
-import { Component, Inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouteParams } from '@angular/router-deprecated';
 
-import { TodoStore } from '../services/todo-store.service';
-import todoTemplate from './todo.html';
-import { TodoHeader } from './todo_header';
-import { TodoFooter } from './todo_footer';
-import { TodoItem } from './todo_item';
+import { TodoStoreService } from '../services/todo-store.service';
+import template from './todo-list.template.html';
+import { TodoHeaderComponent } from './todo-header.component';
+import { TodoFooterComponent } from './todo-footer.component';
+import { TodoItemComponent } from './todo-item.component';
 
 @Component({
-  selector: 'todo',
-  template: todoTemplate,
-  directives: [TodoHeader, TodoFooter, TodoItem]
+  selector: 'todo-list',
+  template: template,
+  directives: [TodoHeaderComponent, TodoFooterComponent, TodoItemComponent]
 })
-export class Todo {
-  constructor(todoStore: TodoStore, params: RouteParams) {
+export class TodoComponent {
+  constructor(todoStore: TodoStoreService, params: RouteParams) {
     this._todoStore = todoStore;
     this._params = params;
   }
