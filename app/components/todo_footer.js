@@ -1,7 +1,7 @@
-'use strict';
 import { Component } from '@angular/core';
 import { ROUTER_DIRECTIVES, RouteParams } from '@angular/router-deprecated';
-import { TodoLocalStore } from '../services/store';
+
+import { TodoStore } from '../services/todo-store.service';
 import todoFooterTemplate from './todo_footer.html';
 
 @Component({
@@ -10,7 +10,7 @@ import todoFooterTemplate from './todo_footer.html';
   directives: [ROUTER_DIRECTIVES]
 })
 export class TodoFooter {
-  constructor(todoStore: TodoLocalStore, params: RouteParams) {
+  constructor(todoStore: TodoStore, params: RouteParams) {
     this._todoStore = todoStore;
     this._params = params;
   }

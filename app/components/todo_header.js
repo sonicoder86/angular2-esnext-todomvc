@@ -1,6 +1,6 @@
-'use strict';
 import { Component, EventEmitter, Output } from '@angular/core';
-import { TodoLocalStore } from '../services/store';
+
+import { TodoStore } from '../services/todo-store.service';
 import todoHeaderTemplate from './todo_header.html';
 
 @Component({
@@ -10,7 +10,7 @@ import todoHeaderTemplate from './todo_header.html';
 export class TodoHeader {
   newTodo = '';
 
-  constructor(todoStore: TodoLocalStore) {
+  constructor(todoStore: TodoStore) {
     this._todoStore = todoStore;
   }
 

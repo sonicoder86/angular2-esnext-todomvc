@@ -18,7 +18,7 @@ export class Todo {
   }
 }
 
-export class TodoLocalStore {
+export class TodoStore {
   todos = [];
 
   constructor() {
