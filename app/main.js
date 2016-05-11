@@ -8,5 +8,6 @@ import { AppComponent } from './components/app/app.component';
 bootstrap(AppComponent, [
   TodoStoreService,
   ROUTER_PROVIDERS,
-  { provide: LocationStrategy, useClass: HashLocationStrategy }
+  { provide: LocationStrategy, useClass: HashLocationStrategy },
+  { provide: 'AUTHOR', useValue: 'Soós Gábor' }
 ]);

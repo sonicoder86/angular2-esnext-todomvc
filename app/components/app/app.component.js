@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { RouteConfig, ROUTER_DIRECTIVES } from '@angular/router-deprecated';
 
 import template from './app.template.html';
@@ -12,4 +12,10 @@ import { TodoComponent } from '../todo-list/todo-list.component';
 @RouteConfig([
   { path: '/:status', component: TodoComponent, name: 'Todo' }
 ])
-export class AppComponent {}
+export class AppComponent {
+
+  constructor(@Inject('AUTHOR') author) {
+    this.author = author;
+  }
+
+}
