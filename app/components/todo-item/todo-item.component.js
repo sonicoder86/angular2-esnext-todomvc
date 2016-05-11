@@ -9,14 +9,11 @@ import template from './todo-item.template.html';
   pipes: [TrimPipe]
 })
 export class TodoItemComponent {
-  @Input()
-  todo;
+  @Input() todo;
 
-  @Output()
-  itemModified = new EventEmitter();
+  @Output() itemModified = new EventEmitter();
 
-  @Output()
-  itemRemoved = new EventEmitter();
+  @Output() itemRemoved = new EventEmitter();
 
   editing = false;
 
