@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ROUTER_DIRECTIVES, RouteParams } from '@angular/router-deprecated';
+import { ROUTER_DIRECTIVES, RouteSegment } from '@angular/router';
 
 import { TodoStoreService } from '../../services/todo-store.service';
 import template from './todo-footer.template.html';
@@ -10,9 +10,9 @@ import template from './todo-footer.template.html';
   directives: [ROUTER_DIRECTIVES]
 })
 export class TodoFooterComponent {
-  constructor(todoStore: TodoStoreService, params: RouteParams) {
+  constructor(todoStore: TodoStoreService, route: RouteSegment) {
     this._todoStore = todoStore;
-    this._params = params;
+    this._route = route;
   }
 
   removeCompleted() {
@@ -32,6 +32,6 @@ export class TodoFooterComponent {
   }
 
   getStatus() {
-    return this._params.get('status');
+    return this._route.parameters.status || '';
   }
 }

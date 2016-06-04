@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { RouteConfig, ROUTER_DIRECTIVES } from '@angular/router-deprecated';
+import { Routes, ROUTER_DIRECTIVES } from '@angular/router';
 
 import template from './app.template.html';
 import { TodoComponent } from '../todo-list/todo-list.component';
@@ -9,8 +9,9 @@ import { TodoComponent } from '../todo-list/todo-list.component';
   directives: [ROUTER_DIRECTIVES],
   template: template
 })
-@RouteConfig([
-  { path: '/:status', component: TodoComponent, name: 'Todo' }
+@Routes([
+  { path: '/', component: TodoComponent },
+  { path: '/status/:status', component: TodoComponent }
 ])
 export class AppComponent {
 

@@ -2,13 +2,13 @@
     <span class="todo-count"><strong>{{ getRemainingCount() }}</strong> {{ getRemainingCount() == 1 ? 'item' : 'items' }} left</span>
     <ul class="filters">
         <li>
-            <a [routerLink]="['/Todo', { status: '' }]" [class.selected]="getStatus() == ''">All</a>
+            <a [routerLink]="['/']" [class.selected]="getStatus() == ''">All</a>
         </li>
         <li>
-            <a [routerLink]="['/Todo', { status: 'active' }]" [class.selected]="getStatus() == 'active'">Active</a>
+            <a [routerLink]="['/status', 'active']" [class.selected]="getStatus() == 'active'">Active</a>
         </li>
         <li>
-            <a [routerLink]="['/Todo', { status: 'completed' }]" [class.selected]="getStatus() == 'completed'">Completed</a>
+            <a [routerLink]="['/status', 'completed']" [class.selected]="getStatus() == 'completed'">Completed</a>
         </li>
     </ul>
     <button class="clear-completed" *ngIf="hasCompleted()" (click)="removeCompleted()">Clear completed</button>
