@@ -1,5 +1,5 @@
 import { bootstrap } from '@angular/platform-browser-dynamic';
-import { ROUTER_PROVIDERS } from '@angular/router';
+import { ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
 import { TodoStoreService } from './services/todo-store.service';
 import { AppComponent } from './components/app/app.component';

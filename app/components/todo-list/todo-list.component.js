@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouteSegment } from '@angular/router';
+import { RouteParams } from '@angular/router-deprecated';
 
 import { TodoStoreService } from '../../services/todo-store.service';
 import template from './todo-list.template.html';
@@ -13,9 +13,9 @@ import { TodoItemComponent } from '../todo-item/todo-item.component';
   directives: [TodoHeaderComponent, TodoFooterComponent, TodoItemComponent]
 })
 export class TodoComponent {
-  constructor(todoStore: TodoStoreService, route: RouteSegment) {
+  constructor(todoStore: TodoStoreService, params: RouteParams) {
     this._todoStore = todoStore;
-    this._route = route;
+    this._params = params;
   }
 
   remove(uid) {
@@ -27,7 +27,7 @@ export class TodoComponent {
   }
 
   getTodos() {
-    let currentStatus = this._route.parameters.status || '';
+    let currentStatus = this._params.get('status');
     if (currentStatus == 'completed') {
       return this._todoStore.getCompleted();
     }
