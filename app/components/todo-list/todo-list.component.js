@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouteParams } from '@angular/router-deprecated';
+import { ActivatedRoute } from '@angular/router';
 
 import { TodoStoreService } from '../../services/todo-store.service';
 import template from './todo-list.template.html';
@@ -13,9 +13,18 @@ import { TodoItemComponent } from '../todo-item/todo-item.component';
   directives: [TodoHeaderComponent, TodoFooterComponent, TodoItemComponent]
 })
 export class TodoComponent {
-  constructor(todoStore: TodoStoreService, params: RouteParams) {
+  constructor(todoStore: TodoStoreService, route: ActivatedRoute) {
     this._todoStore = todoStore;
-    this._params = params;
+    this._route = route;
+    this._currentStatus = '';
+  }
+
+  ngOnInit() {
+    this._route.params
+      .map(params => params.status)
+      .subscribe((status) => {
+        this._currentStatus = status;
+      });
   }
 
   remove(uid) {
@@ -27,11 +36,10 @@ export class TodoComponent {
   }
 
   getTodos() {
-    let currentStatus = this._params.get('status');
-    if (currentStatus == 'completed') {
+    if (this._currentStatus == 'completed') {
       return this._todoStore.getCompleted();
     }
-    else if (currentStatus == 'active') {
+    else if (this._currentStatus == 'active') {
       return this._todoStore.getRemaining();
     }
     else {
