@@ -3,7 +3,8 @@
   "version": "3.0.0",
   "main": "app/main.js",
   "scripts": {
-    "start": "http-server -a 0.0.0.0 -p 9000",
+    "start": "concurrently --kill-others 'npm run bundle' 'npm run server'",
+    "server": "http-server -a 0.0.0.0 -p 9000",
     "bundle": "webpack app/main.js app/dist/main.bundle.js --config webpack.config.js --watch -d"
   },
   "repository": {
@@ -44,10 +45,11 @@
     "zone.js": "0.6.12"
   },
   "devDependencies": {
-    "babel-core": "6.10.4",
+    "babel-core": "6.11.4",
     "babel-loader": "6.2.4",
     "babel-preset-angular2": "0.0.2",
     "babel-preset-es2015": "6.9.0",
+    "concurrently": "2.2.0",
     "raw-loader": "0.5.1",
     "webpack": "1.13.1"
   }
