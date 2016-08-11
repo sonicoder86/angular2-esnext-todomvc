@@ -1,11 +1,5 @@
-import { bootstrap } from '@angular/platform-browser-dynamic';
-import { routeProvider } from './components/todo.routes';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { TodoStoreService } from './services/todo-store.service';
-import { AppComponent } from './components/app/app.component';
+import { MainModule } from './main.module';
 
-bootstrap(AppComponent, [
-  TodoStoreService,
-  routeProvider,
-  { provide: 'AUTHOR', useValue: 'Soós Gábor' }
-]);
+platformBrowserDynamic().bootstrapModule(MainModule);
