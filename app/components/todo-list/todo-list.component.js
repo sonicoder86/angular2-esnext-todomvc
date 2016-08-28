@@ -12,7 +12,7 @@ import { TodoItemComponent } from '../todo-item/todo-item.component';
   template: template,
   directives: [TodoHeaderComponent, TodoFooterComponent, TodoItemComponent]
 })
-export class TodoComponent {
+export class TodoListComponent {
   constructor(todoStore: TodoStoreService, route: ActivatedRoute) {
     this._todoStore = todoStore;
     this._route = route;

@@ -7,7 +7,10 @@ import { NgModule } from '@angular/core';
 import { TodoStoreService } from './services/todo-store.service';
 import {
   AppComponent,
-  TodoComponent
+  TodoListComponent,
+  TodoFooterComponent,
+  TodoHeaderComponent,
+  TodoItemComponent
 } from './components';
 import { routes } from './components/todo.routes';
 
@@ -15,7 +18,10 @@ import { routes } from './components/todo.routes';
   bootstrap: [AppComponent],
   declarations: [
     AppComponent,
-    TodoComponent
+    TodoListComponent,
+    TodoFooterComponent,
+    TodoHeaderComponent,
+    TodoItemComponent
   ],
   imports: [
     BrowserModule,

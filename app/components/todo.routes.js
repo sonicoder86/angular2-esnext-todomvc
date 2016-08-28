@@ -1,6 +1,6 @@
-import { TodoComponent } from './todo-list/todo-list.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
 
 export let routes = [
-  { path: '', component: TodoComponent, terminal: true },
-  { path: ':status', component: TodoComponent }
+  { path: '', component: TodoListComponent, terminal: true },
+  { path: ':status', component: TodoListComponent }
 ];
