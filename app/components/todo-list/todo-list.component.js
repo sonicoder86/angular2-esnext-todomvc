@@ -3,14 +3,10 @@ import { ActivatedRoute } from '@angular/router';
 
 import { TodoStoreService } from '../../services/todo-store.service';
 import template from './todo-list.template.html';
-import { TodoHeaderComponent } from '../todo-header/todo-header.component';
-import { TodoFooterComponent } from '../todo-footer/todo-footer.component';
-import { TodoItemComponent } from '../todo-item/todo-item.component';
 
 @Component({
   selector: 'todo-list',
-  template: template,
-  directives: [TodoHeaderComponent, TodoFooterComponent, TodoItemComponent]
+  template: template
 })
 export class TodoListComponent {
   constructor(todoStore: TodoStoreService, route: ActivatedRoute) {

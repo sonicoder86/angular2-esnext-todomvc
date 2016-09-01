@@ -12,6 +12,7 @@ import {
   TodoHeaderComponent,
   TodoItemComponent
 } from './components';
+import { TrimPipe } from './pipes';
 import { routes } from './components/todo.routes';
 
 @NgModule({
@@ -21,7 +22,8 @@ import { routes } from './components/todo.routes';
     TodoListComponent,
     TodoFooterComponent,
     TodoHeaderComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    TrimPipe
   ],
   imports: [
     BrowserModule,
