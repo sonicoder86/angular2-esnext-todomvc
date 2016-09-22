@@ -49,7 +49,7 @@ module.exports = {
           presets: ['es2015', 'angular2']
         }
       },
-      { test: /\.html$/, loader: 'html?attrs=false' },
+      { test: /\.html$/, loader: 'html?attrs=false&caseSensitive&removeAttributeQuotes=false' },
       { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader') }
     ]
   }
