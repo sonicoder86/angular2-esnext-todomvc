@@ -29,4 +29,4 @@ npm start
 
 ```
 
-Open it in your browser [http://localhost:9000](http://localhost:9000).
+Open it in your browser [http://localhost:3000](http://localhost:3000).
