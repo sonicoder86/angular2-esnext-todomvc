@@ -6,6 +6,8 @@ let CopyWebpackPlugin = require('copy-webpack-plugin');
 
 if (process.env.npm_lifecycle_event == 'build' || process.env.NODE_ENV == 'production') {
   module.exports = merge.smart(commonConfig, {
+    debug: false,
+
     plugins: [
       new webpack.optimize.DedupePlugin(),
       new webpack.optimize.UglifyJsPlugin({
@@ -25,11 +27,17 @@ if (process.env.npm_lifecycle_event == 'build' || process.env.NODE_ENV == 'produ
   });
 } else {
   module.exports = merge.smart(commonConfig, {
+    debug: true,
+
     devServer: {
-      contentBase: './client',
+      contentBase: './src',
       port: 3000,
       inline: true,
-      watchOptions: { aggregateTimeout: 300, poll: 500 }
+      historyApiFallback: true,
+      watchOptions: {
+        aggregateTimeout: 300,
+        poll: 500
+      }
     },
 
     devtool: 'cheap-module-source-map'

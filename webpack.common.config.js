@@ -18,11 +18,11 @@ module.exports = {
     chunkFilename: '[id].chunk.js'
   },
 
-  context: path.join(__dirname, 'client'),
+  context: path.join(process.cwd(), 'src'),
 
   resolve: {
-    root: [ path.join(__dirname, 'client') ],
-    extensions: ['', '.js']
+    root: [ path.join(process.cwd(), 'src') ],
+    extensions: ['', '.ts', '.js', '.json']
   },
 
   plugins: [
@@ -31,13 +31,6 @@ module.exports = {
     new ExtractTextPlugin('style.bundle.css'),
     new ProgressBarPlugin()
   ],
-
-  stats: {
-    errorDetails: true,
-    colors: true,
-    modules: true,
-    reasons: true
-  },
 
   module: {
     loaders: [
@@ -52,5 +45,21 @@ module.exports = {
       { test: /\.html$/, loader: 'html?attrs=false&caseSensitive&removeAttributeQuotes=false' },
       { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader') }
     ]
+  },
+
+  stats: {
+    errorDetails: true,
+    colors: true,
+    modules: true,
+    reasons: true
+  },
+
+  node: {
+    global: 'window',
+    crypto: 'empty',
+    process: true,
+    module: false,
+    clearImmediate: false,
+    setImmediate: false
   }
 };
