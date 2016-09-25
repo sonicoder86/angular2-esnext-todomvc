@@ -13,7 +13,7 @@ import {
   TodoItemComponent
 } from './components';
 import { TrimPipe } from './pipes';
-import { routes } from './components/todo.routes';
+import { routes } from './routes';
 
 @NgModule({
   bootstrap: [AppComponent],
