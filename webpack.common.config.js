@@ -1,36 +1,13 @@
 'use strict';
-let webpack = require('webpack');
 let path = require('path');
-let ExtractTextPlugin = require('extract-text-webpack-plugin');
-let ProgressBarPlugin = require('progress-bar-webpack-plugin');
 
 module.exports = {
-  entry: {
-    'main': './app/main.js',
-    'vendor': './app/vendor.js',
-    'style': './app/style.js',
-  },
-
-  output: {
-    path: './dist',
-    filename: '[name].bundle.js',
-    sourceMapFilename: '[name].map',
-    chunkFilename: '[id].chunk.js'
-  },
-
   context: path.join(process.cwd(), 'src'),
 
   resolve: {
     root: [ path.join(process.cwd(), 'src') ],
     extensions: ['', '.ts', '.js', '.json']
   },
-
-  plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(true),
-    new webpack.optimize.CommonsChunkPlugin({ name: ['main', 'vendor'], minChunks: Infinity }),
-    new ExtractTextPlugin('style.bundle.css'),
-    new ProgressBarPlugin()
-  ],
 
   module: {
     loaders: [
@@ -39,11 +16,18 @@ module.exports = {
         loader: 'babel',
         exclude: /(node_modules)/,
         query: {
-          presets: ['es2015', 'angular2']
+          presets: ['latest', 'angular2']
         }
       },
-      { test: /\.html$/, loader: 'html?attrs=false&caseSensitive&removeAttributeQuotes=false' },
-      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader') }
+      {
+        test: /\.js$/,
+        loader: 'source-map',
+        exclude: [
+          path.join(process.cwd(), 'node_modules/rxjs'),
+          path.join(process.cwd(), 'node_modules/@angular')
+        ]
+      },
+      { test: /\.html$/, loader: 'html?attrs=false&caseSensitive&removeAttributeQuotes=false' }
     ]
   },
 
