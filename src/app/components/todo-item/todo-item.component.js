@@ -25,8 +25,7 @@ export class TodoItemComponent {
 
     if (this.todo.title.length === 0) {
       this.remove();
-    }
-    else {
+    } else {
       this.update();
     }
   }
