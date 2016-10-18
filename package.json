@@ -41,7 +41,7 @@
     "rxjs": "5.0.0-beta.12",
     "todomvc-app-css": "2.0.6",
     "todomvc-common": "1.0.2",
-    "zone.js": "0.6.25"
+    "zone.js": "0.6.26"
   },
   "devDependencies": {
     "babel-core": "6.17.0",
