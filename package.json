@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "babel-core": "6.17.0",
-    "babel-loader": "6.2.6",
+    "babel-loader": "6.2.7",
     "babel-preset-angular2": "0.0.2",
     "babel-preset-latest": "6.16.0",
     "copy-webpack-plugin": "4.0.0",
