@@ -28,14 +28,14 @@
     "node": "6.5.0"
   },
   "dependencies": {
-    "@angular/common": "2.1.0",
-    "@angular/compiler": "2.1.0",
-    "@angular/core": "2.1.0",
-    "@angular/forms": "2.1.0",
-    "@angular/http": "2.1.0",
-    "@angular/platform-browser": "2.1.0",
-    "@angular/platform-browser-dynamic": "2.1.0",
-    "@angular/router": "3.1.0",
+    "@angular/common": "2.1.2",
+    "@angular/compiler": "2.1.2",
+    "@angular/core": "2.1.2",
+    "@angular/forms": "2.1.2",
+    "@angular/http": "2.1.2",
+    "@angular/platform-browser": "2.1.2",
+    "@angular/platform-browser-dynamic": "2.1.2",
+    "@angular/router": "3.1.2",
     "core-js": "2.4.1",
     "node-uuid": "1.4.7",
     "rxjs": "5.0.0-beta.12",
@@ -44,7 +44,7 @@
     "zone.js": "0.6.26"
   },
   "devDependencies": {
-    "babel-core": "6.17.0",
+    "babel-core": "6.18.0",
     "babel-loader": "6.2.7",
     "babel-preset-angular2": "0.0.2",
     "babel-preset-latest": "6.16.0",
