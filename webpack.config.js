@@ -44,9 +44,7 @@ if (npmLifecycleEvent == 'build' || environment == 'production') {
       }),
       new CopyWebpackPlugin([
         { from: 'index.html' },
-        { from: 'favicon.ico' },
-        { from: 'api', to: 'api' },
-        { from: 'img', to: 'img' }
+        { from: 'favicon.ico' }
       ])
     ]),
 
