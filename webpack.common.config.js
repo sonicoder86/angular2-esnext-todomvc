@@ -5,29 +5,35 @@ module.exports = {
   context: path.join(process.cwd(), 'src'),
 
   resolve: {
-    root: [ path.join(process.cwd(), 'src') ],
-    extensions: ['', '.ts', '.js', '.json']
+    modules: [
+      'node_modules',
+      path.resolve(process.cwd(), 'src')
+    ],
+    extensions: ['.js', '.json']
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel?presets[]=es2015&presets[]=angular2',
         exclude: /(node_modules)/,
-        query: {
-          presets: ['latest', 'angular2']
-        }
+        // query: {
+        //   presets: ['latest', 'angular2']
+        // }
       },
       {
         test: /\.js$/,
-        loader: 'source-map',
+        use: 'source-map',
         exclude: [
           path.join(process.cwd(), 'node_modules/rxjs'),
           path.join(process.cwd(), 'node_modules/@angular')
         ]
       },
-      { test: /\.html$/, loader: 'html?attrs=false&caseSensitive&removeAttributeQuotes=false' }
+      {
+        test: /\.html$/,
+        use: 'html?attrs=false&caseSensitive&removeAttributeQuotes=false'
+      }
     ]
   },
 
@@ -39,7 +45,7 @@ module.exports = {
   },
 
   node: {
-    global: 'window',
+    global: true,
     crypto: 'empty',
     process: true,
     module: false,

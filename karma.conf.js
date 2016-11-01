@@ -21,7 +21,11 @@ module.exports = function(config) {
     reporters: ['dots'],
 
     webpack: require('./webpack.config'),
-    webpackServer: { noInfo: true },
+
+    webpackServer: {
+      stats: 'errors-only',
+      noInfo: true
+    },
 
     port: 9876,
 
