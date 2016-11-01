@@ -16,6 +16,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
+        // loader: 'babel',
         loader: 'babel?presets[]=es2015&presets[]=angular2',
         exclude: /(node_modules)/,
         // query: {
