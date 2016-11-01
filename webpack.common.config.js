@@ -16,18 +16,11 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        // loader: 'babel',
-        loader: 'babel?presets[]=es2015&presets[]=angular2',
+        loader: 'babel',
         exclude: /(node_modules)/,
-        // query: {
-        //   presets: ['latest', 'angular2']
-        // }
-        // query: JSON.stringify({
-        //   presets: ['latest', 'angular2']
-        // })
-        // options: {
-        //   presets: ['latest', 'angular2']
-        // }
+        query: {
+          presets: ['latest', 'angular2']
+        }
       },
       {
         test: /\.js$/,
