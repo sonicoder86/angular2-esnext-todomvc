@@ -22,6 +22,12 @@ module.exports = {
         // query: {
         //   presets: ['latest', 'angular2']
         // }
+        // query: JSON.stringify({
+        //   presets: ['latest', 'angular2']
+        // })
+        // options: {
+        //   presets: ['latest', 'angular2']
+        // }
       },
       {
         test: /\.js$/,

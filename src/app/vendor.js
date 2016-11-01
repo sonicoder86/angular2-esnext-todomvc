@@ -1,7 +1,6 @@
 import './polyfill';
 import 'rxjs';
 
-import 'localStorage';
 import 'node-uuid';
 
 import '@angular/platform-browser';
