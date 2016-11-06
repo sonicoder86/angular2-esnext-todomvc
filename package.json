@@ -44,7 +44,7 @@
     "zone.js": "0.6.26"
   },
   "devDependencies": {
-    "babel-core": "6.18.0",
+    "babel-core": "6.18.2",
     "babel-loader": "6.2.7",
     "babel-preset-angular2": "0.0.2",
     "babel-preset-latest": "6.16.0",
