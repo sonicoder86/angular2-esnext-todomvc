@@ -16,7 +16,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         exclude: /(node_modules)/,
         query: {
           presets: ['latest', 'angular2']
@@ -24,7 +24,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        use: 'source-map',
+        use: 'source-map-loader',
         exclude: [
           path.join(process.cwd(), 'node_modules/rxjs'),
           path.join(process.cwd(), 'node_modules/@angular')
@@ -32,7 +32,7 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        use: 'html?attrs=false&caseSensitive&removeAttributeQuotes=false'
+        use: 'html-loader?attrs=false&caseSensitive&removeAttributeQuotes=false'
       }
     ]
   },
