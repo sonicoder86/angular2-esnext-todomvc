@@ -34,7 +34,7 @@
     "todomvc-common": "1.0.3"
   },
   "devDependencies": {
-    "babel-core": "6.18.2",
+    "babel-core": "6.20.0",
     "babel-loader": "6.2.8",
     "babel-preset-angular2": "0.0.2",
     "babel-preset-latest": "6.16.0",
