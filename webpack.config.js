@@ -76,7 +76,7 @@ if (npmLifecycleEvent == 'build' || environment == 'production') {
   module.exports = merge.smart(commonConfig, {
     devtool: 'inline-source-map',
 
-    plugins: [contextReplacementPlugin]
+    plugins: [contextReplacementPlugin, new webpack.ProgressPlugin()]
   });
 } else {
   module.exports = merge.smart(commonConfig, {
