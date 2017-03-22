@@ -39,7 +39,7 @@
     "core-js": "2.4.1",
     "rxjs": "5.2.0",
     "zone.js": "0.7.7",
-    "node-uuid": "1.4.7",
+    "node-uuid": "1.4.8",
     "todomvc-app-css": "2.0.6",
     "todomvc-common": "1.0.3"
   },
