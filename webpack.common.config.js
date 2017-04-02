@@ -19,7 +19,7 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /(node_modules)/,
         query: {
-          presets: ['latest', 'angular2']
+          presets: ['env', 'angular2']
         }
       },
       {

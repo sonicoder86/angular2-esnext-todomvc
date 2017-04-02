@@ -1,10 +1,10 @@
-# Angular 2 ESNext TodoMVC
+# Angular ESNext TodoMVC
 [![Dependency Status](https://david-dm.org/blacksonic/angular2-esnext-todomvc.svg)](https://david-dm.org/blacksonic/angular2-esnext-todomvc)
 [![devDependency Status](https://david-dm.org/blacksonic/angular2-esnext-todomvc/dev-status.svg)](https://david-dm.org/blacksonic/angular2-esnext-todomvc?type=dev)
 
-TodoMVC application built with Angular 2 in Javascript (ES6/ES7).
+TodoMVC application built with Angular in Javascript (ES6/ES7).
 
-Layout and namings based on the [official Angular 2 style guide](https://angular.io/styleguide).
+Layout and namings based on the [official Angular style guide](https://angular.io/styleguide).
 
 ### Concepts it covers
 

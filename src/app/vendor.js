@@ -1,7 +1,7 @@
 import './polyfill';
 import 'rxjs';
 
-import 'node-uuid';
+import 'uuid';
 
 import '@angular/platform-browser';
 import '@angular/platform-browser-dynamic';
